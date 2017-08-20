@@ -7,5 +7,10 @@ var app = new Vue({
         formattedTotal: function() {
             return '$' + _.round2Fixed(this.total)
         }
+    },
+    methods: {
+        addItem: function() {
+            this.total += 9.99
+        }
     }
 });
