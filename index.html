@@ -26,7 +26,7 @@
         <div class="cart">
             <h2>Shopping Cart</h2>
             <div>
-                No items in the cart.
+                <div>Total: {{ formattedTotal }}</div>
             </div>
         </div>
     </div>
@@ -34,7 +34,9 @@
 
 <!-- Scripts -->
 <script src="/reload/reload.js"></script>
+<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
 <script src="node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript" src="public/lib/lodash-custom.js"></script>
 <script type="text/javascript" src="public/script.js"></script>
 
 </body>
