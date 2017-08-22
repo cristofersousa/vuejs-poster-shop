@@ -1,7 +1,15 @@
 var app = new Vue({
     el: '#app',
     data: {
-        total: 0
+        total: 0,
+        items: [
+          { title: 'Item 1'},
+          { title: 'Item 2'},
+          { title: 'Item 3'},
+          { title: 'Item 4'},
+          { title: 'Item 5'}
+        ],
+        cart: []
     },
     computed: {
         formattedTotal: function() {
@@ -9,8 +17,8 @@ var app = new Vue({
         }
     },
     methods: {
-        addItem: function() {
-            this.total += 9.99
+        addItem: function(index) {
+            console.log(index)
         }
     }
 });
