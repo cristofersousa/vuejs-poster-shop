@@ -24,7 +24,7 @@
             <div class="produt" v-for="(item, index) in items">
                 <h4 class="product-title">{{ item.title }}</h4>
                 <p class="product-price">{{ item.price | monetaryValue("$") }}</p>
-                <button class="add-to-cart" v-on:click="addToCart(index)">Add to cart</button>
+                <button class="add-to-cart" @click="addToCart(index)">Add to cart</button>
             </div>
         </div>
         <div class="cart">
@@ -34,6 +34,8 @@
               <li class="cart-item" v-for="item in cart">
                 <div class="item-title">{{ item.title }}</div>
                 <span class="item-qty">{{ item.price * item.qty | monetaryValue("$") }}</span>
+                <button class="btn" @click="increaseQty(item)">+</button>
+                <button class="btn" @click="decreaseQty(item)">-</button>
               </li>
             </ul>
 
@@ -52,6 +54,7 @@
 <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
 <script src="node_modules/vue/dist/vue.js"></script>
 <script type="text/javascript" src="public/lib/lodash-custom.js"></script>
+<script type="text/javascript" src="public/lib/vue-custom-filters.js"></script>
 <script type="text/javascript" src="public/script.js"></script>
 
 </body>
